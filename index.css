@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #364fc0;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.principal {
+    display: flex;
+    margin: 0 auto;
+    width: 90%;
+    gap: 2rem; /* Espaçamento entre as divs */
+    justify-content: space-between; /* Distribui as divs igualmente */
+    align-items: flex-start; /* Alinha as divs no topo */
+}
+
+.container, .sidebar, .emprestimos {
+    flex: 1; /* As divs ocupam o mesmo espaço horizontalmente */
+    max-width: 30%; /* Limita a largura para torná-las mais largas */
+    padding: 1rem; /* Padding ajustado para menos altura */
+    height: auto; /* Deixa a altura automática e proporcional ao conteúdo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.container {
+    background-color: white;
+}
+
+.sidebar {
+    background-color: rgb(255, 1, 1);
+}
+
+.emprestimos {
+    background-color: white;
+}
+
+.section {
+    margin-bottom: 2rem;
+}
+
+.section h2 {
+    color: #56c036;
+    margin-bottom: 1rem;
+}
+
+.content h2 {
+    margin-bottom: 1rem;
+    color: #4CAF50;
+}
+
+ul.menu {
+    list-style: none;
+    margin: 1rem 0;
+}
+
+ul.menu li {
+    margin: 1rem 0;
+}
+
+ul.menu li a {
+    display: inline-block;
+    background-color: #549756;
+    color: rgb(255, 255, 255);
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+ul.menu li a:hover {
+    background-color: #45a049;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .principal {
+        flex-direction: column; /* As divs ficam uma abaixo da outra em telas menores */
+    }
+
+    .container, .sidebar, .emprestimos {
+        max-width: 100%; /* As divs ocupam toda a largura em dispositivos menores */
+        margin-bottom: 1rem; /* Espaçamento entre as divs empilhadas */
+    }
+}
